@@ -1,7 +1,7 @@
 function criticalCode() {
   throw "throwing an exception";
 }
-
+hello()
 function logError(theException) {
   console.log(theException);
 }
