@@ -12,7 +12,7 @@ function isValidIP(ip) {
       num > 255 ||
       (part[0] === "0" && part.length > 1)
     ) {
-      return false; 
+      return false;
     }
   }
 
