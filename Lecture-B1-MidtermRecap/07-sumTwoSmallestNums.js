@@ -16,7 +16,6 @@ function sumTwoSmallestNums(numbers) {
     return smallest + secondSmallest;
 }
 
-// Test cases
 console.log(sumTwoSmallestNums([19, 5, 42, 2, 771])); // Output: 7
 console.log(sumTwoSmallestNums([10, 343445353, 3453445, 3453545353453])); // Output: 3453445
 console.log(sumTwoSmallestNums([2, 9, 6, -1])); // Output: 8

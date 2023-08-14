@@ -9,7 +9,6 @@ function removeDups(arr) {
     return result;
 }
 
-// Test cases
 console.log(removeDups([1, 0, 1, 0]));           // Output: [1, 0]
 console.log(removeDups(["The", "big", "cat"])); // Output: ["The", "big", "cat"]
 console.log(removeDups(["John", "Taylor", "John"])); // Output: ["John", "Taylor"]
