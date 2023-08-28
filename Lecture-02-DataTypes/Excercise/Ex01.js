@@ -6,6 +6,6 @@ function lessThen100(num1,num2) {
         return false;
     }
 }
-console.log(lessThen100(22,15));
-console.log(lessThen100(83,34));
-console.log(lessThen100(3,77));
+console.log(lessThen100(22,15)); // Output: true
+console.log(lessThen100(83,34)); // Output: false
+console.log(lessThen100(3,77)); // Output: true
