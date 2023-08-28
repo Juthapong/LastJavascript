@@ -5,5 +5,5 @@ function indexMuliplir(arr) {
   }
   return result;
 }
-console.log(indexMuliplir([1, 2, 3, 4, 5]));
-console.log(indexMuliplir([-3, 0, 8, -6]));
+console.log(indexMuliplir([1, 2, 3, 4, 5])); // Output: 40
+console.log(indexMuliplir([-3, 0, 8, -6])); // Output: -2

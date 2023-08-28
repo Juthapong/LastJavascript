@@ -12,7 +12,6 @@ function sumTwoSmallestNums(numbers) {
             }
         }
     }
-
     return smallest + secondSmallest;
 }
 

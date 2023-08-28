@@ -8,6 +8,6 @@ function filterArray(arr) {
   return totalSum;
 
 }
-console.log(filterArray([1,2,"a","b"]));
-console.log(filterArray([1,"a","b",0,15]));
-console.log(filterArray([1,2,"aasf","1","123",123]));
+console.log(filterArray([1,2,"a","b"])); // Output: [ 1, 2 ]
+console.log(filterArray([1,"a","b",0,15])); // Output: [ 1, 0, 15 ]
+console.log(filterArray([1,2,"aasf","1","123",123])); // Output: [ 1, 2, 123 ]
