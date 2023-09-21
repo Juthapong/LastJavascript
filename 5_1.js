@@ -1,34 +1,44 @@
-function calculateMaximizedProduct(input) {
-    let product = 1;
-    let partition = [];
-  
-    if (input === 2) {
-      partition.push(1);
+function maxProductExplanation(input) {
+  let product = 1;
+  let partition = [];
+  let originalInput = input;
+
+  if (input <= 1) {
+    partition.push(input);
+  } else {
+    while (input > 5) {
+      partition.push(3);
+      input -= 3;
+    }
+
+    if (input === 4) {
+      partition.unshift(2, 2);
+    } else if (input === 5) {
+      partition.unshift(2, 3);
+    } else if (input === 3) {
+      partition.unshift(3);
+    } else if (input === 2) {
+      partition.unshift(1, 1);
     } else {
-      let n = input;
-      while (n > 0) {
-        if (n <= 3) {
-          partition.push(n);
-          break;
-        }
-        partition.push(3);
-        n -= 3;
+      let twos = Math.floor(input / 2);
+      let threes = input % 2;
+      for (let i = 0; i < twos; i++) {
+        partition.unshift(2);
+      }
+      for (let i = 0; i < threes; i++) {
+        partition.unshift(3);
       }
     }
-  
+
     product = partition.reduce((acc, num) => acc * num, 1);
-  
-    console.log(`Input: n = ${input}`);
-    console.log(`Output: ${product}`);
-    console.log(`Explanation: ${input} = ${partition.join(' + ')}, ${partition.join(' × ')} = ${product}\n`);
-  
-    return product;
+    return `Input: n = ${originalInput}\nOutput: ${product}\nExplanation: ${originalInput} = ${partition.join(
+      " + "
+    )}, ${partition.join(" × ")} = ${product}`;
   }
-  
-  // Test cases following the specified output pattern
-  calculateMaximizedProduct(2); // Output: 1
-  calculateMaximizedProduct(5); // Output: 6
-  calculateMaximizedProduct(7); // Output: 12
-  calculateMaximizedProduct(10); // Output: 36
-  calculateMaximizedProduct(15); // Output: 243
-  
+}
+
+console.log(maxProductExplanation(2));
+console.log(maxProductExplanation(5));
+console.log(maxProductExplanation(7));
+console.log(maxProductExplanation(10));
+console.log(maxProductExplanation(19));
